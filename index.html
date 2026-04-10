@@ -1,0 +1,406 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Chess Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body class="h-screen overflow-hidden flex antialiased selection:bg-neutral-800">
+
+    <!-- Sidebar -->
+    <aside class="w-16 md:w-64 bg-[#0a0a0a] border-r border-neutral-900 flex flex-col shrink-0 transition-all duration-300 z-20 relative">
+        <div class="h-16 flex items-center justify-center md:justify-start md:px-6 border-b border-neutral-900 shrink-0">
+            <div class="font-semibold tracking-tighter text-xl text-neutral-100 flex items-center gap-2">
+                <iconify-icon icon="solar:crown-minimalistic-linear" class="text-2xl md:hidden"></iconify-icon>
+                <span class="hidden md:block">CHESS</span>
+            </div>
+        </div>
+        
+        <nav class="flex-1 p-3 space-y-1 overflow-y-auto">
+            <button data-target="home" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 bg-neutral-900 border border-neutral-800 text-neutral-100 shadow-sm">
+                <iconify-icon icon="solar:home-2-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block">Home</span>
+            </button>
+            <button data-target="news" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:document-text-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block">News</span>
+            </button>
+            <button data-target="players" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:users-group-rounded-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block">Players</span>
+            </button>
+            <button data-target="leaderboard" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:cup-star-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block">Leaderboard</span>
+            </button>
+            <button data-target="profile" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:user-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block">Profile</span>
+            </button>
+        </nav>
+        
+        <div class="p-4 border-t border-neutral-900 hidden md:block">
+            <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4 text-center">
+                <div class="text-xs font-medium text-neutral-400 mb-2">Upgrade to Pro</div>
+                <button class="w-full bg-neutral-100 hover:bg-white text-black text-xs font-medium py-1.5 rounded-md transition-colors">
+                    View Plans
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Layout -->
+    <main class="flex-1 flex flex-col min-w-0 bg-[#000000]">
+        
+        <!-- Navbar -->
+        <header class="h-16 flex items-center justify-between px-6 border-b border-neutral-900 shrink-0 bg-[#0a0a0a]/80 backdrop-blur-md sticky top-0 z-10">
+            <div class="flex items-center bg-neutral-900/50 border border-neutral-800 rounded-full px-3 py-1.5 w-48 md:w-80 focus-within:border-neutral-700 focus-within:bg-neutral-900 transition-colors">
+                <iconify-icon icon="solar:magnifer-linear" stroke-width="1.5" class="text-neutral-500 text-lg mr-2"></iconify-icon>
+                <input type="text" placeholder="Search..." class="bg-transparent text-sm text-neutral-200 w-full outline-none placeholder:text-neutral-600">
+            </div>
+            
+            <div class="flex items-center gap-4 border-l border-neutral-900 pl-4 ml-4">
+                <button class="text-neutral-500 hover:text-neutral-200 transition-colors relative">
+                    <iconify-icon icon="solar:bell-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                    <span class="absolute top-0 right-0 w-2 h-2 bg-blue-500 rounded-full border border-[#0a0a0a]"></span>
+                </button>
+                <button class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 overflow-hidden hover:opacity-80 transition-opacity">
+                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="Profile" class="w-full h-full object-cover">
+                </button>
+            </div>
+        </header>
+
+        <!-- Dynamic Sections -->
+        <div class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+            
+            <!-- 1. Home Section -->
+            <section id="sec-home" class="content-section fade-in max-w-6xl mx-auto">
+                <div class="flex flex-col lg:flex-row gap-12 items-center justify-center min-h-[calc(100vh-12rem)]">
+                    
+                    <!-- Hero Content -->
+                    <div class="flex-1 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium mb-2">
+                            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                            Live Server Online
+                        </div>
+                        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-50 leading-tight">
+                            Master your strategy,<br>
+                            <span class="text-neutral-500">Play Chess Online.</span>
+                        </h1>
+                        <p class="text-sm md:text-base text-neutral-400 max-w-md mx-auto lg:mx-0">
+                            Challenge players worldwide, analyze your matches with AI, and climb the global leaderboards on a platform built for modern gameplay.
+                        </p>
+                        <div class="flex items-center gap-4 justify-center lg:justify-start pt-2">
+                            <button class="bg-neutral-100 hover:bg-white text-black px-6 py-2.5 rounded-lg text-sm font-medium transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                                Play Now
+                            </button>
+                            <button class="bg-transparent border border-neutral-800 hover:bg-neutral-900 text-neutral-300 px-6 py-2.5 rounded-lg text-sm font-medium transition-colors">
+                                Play Computer
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Chessboard -->
+                    <div class="flex-1 w-full max-w-md">
+                        <div class="bg-neutral-900 p-3 md:p-4 rounded-2xl border border-neutral-800 shadow-2xl">
+                            <div class="flex justify-between items-center mb-3 px-2 text-xs font-medium text-neutral-500">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-6 h-6 rounded bg-neutral-800"></div>
+                                    Opponent <span class="text-neutral-600">(1500)</span>
+                                </div>
+                                <span>10:00</span>
+                            </div>
+                            
+                            <div id="chessboard" class="grid grid-cols-8 aspect-square border border-neutral-800 rounded overflow-hidden shadow-inner w-full">
+                                <!-- Board generated via JS -->
+                            </div>
+                            
+                            <div class="flex justify-between items-center mt-3 px-2 text-xs font-medium text-neutral-300">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="You" class="w-6 h-6 rounded bg-neutral-800">
+                                    You <span class="text-neutral-600">(1523)</span>
+                                </div>
+                                <span>10:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- 2. News Section -->
+            <section id="sec-news" class="content-section hide-section fade-in max-w-6xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-semibold tracking-tight text-neutral-100 mb-2">Latest News</h2>
+                    <p class="text-sm text-neutral-500">Updates, tournament results, and community highlights.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <article class="group bg-neutral-900/50 border border-neutral-800 rounded-xl overflow-hidden hover:bg-neutral-900 transition-all duration-300 cursor-pointer flex flex-col">
+                        <div class="aspect-video bg-neutral-800 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-neutral-900 group-hover:scale-105 transition-transform duration-500"></div>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col">
+                            <div class="text-xs font-medium text-blue-400 mb-2">Tournaments</div>
+                            <h3 class="text-base font-semibold tracking-tight text-neutral-200 mb-2">World Championship 2024 Dates Announced</h3>
+                            <p class="text-xs text-neutral-500 line-clamp-2 mt-auto">The highly anticipated match will take place this November, featuring the reigning champion against the candidates winner.</p>
+                        </div>
+                    </article>
+                    <!-- Card 2 -->
+                    <article class="group bg-neutral-900/50 border border-neutral-800 rounded-xl overflow-hidden hover:bg-neutral-900 transition-all duration-300 cursor-pointer flex flex-col">
+                        <div class="aspect-video bg-neutral-800 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/40 to-neutral-900 group-hover:scale-105 transition-transform duration-500"></div>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col">
+                            <div class="text-xs font-medium text-emerald-400 mb-2">Updates</div>
+                            <h3 class="text-base font-semibold tracking-tight text-neutral-200 mb-2">Platform Update: v2.4 introduces AI Analysis</h3>
+                            <p class="text-xs text-neutral-500 line-clamp-2 mt-auto">Review your games with our brand new engine integration. Find blunders, mistakes, and brilliant moves instantly.</p>
+                        </div>
+                    </article>
+                    <!-- Card 3 -->
+                    <article class="group bg-neutral-900/50 border border-neutral-800 rounded-xl overflow-hidden hover:bg-neutral-900 transition-all duration-300 cursor-pointer flex flex-col">
+                        <div class="aspect-video bg-neutral-800 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-neutral-900 group-hover:scale-105 transition-transform duration-500"></div>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col">
+                            <div class="text-xs font-medium text-purple-400 mb-2">Community</div>
+                            <h3 class="text-base font-semibold tracking-tight text-neutral-200 mb-2">Grandmaster Speedrun Challenge Concludes</h3>
+                            <p class="text-xs text-neutral-500 line-clamp-2 mt-auto">Watch highlights from the recent 24-hour stream where community members tested their skills against a GM.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 3. Players Section -->
+            <section id="sec-players" class="content-section hide-section fade-in max-w-6xl mx-auto">
+                <div class="flex justify-between items-end mb-8">
+                    <div>
+                        <h2 class="text-2xl font-semibold tracking-tight text-neutral-100 mb-2">Top Players</h2>
+                        <p class="text-sm text-neutral-500">Discover and follow the grandmasters of the game.</p>
+                    </div>
+                    <div class="hidden md:flex gap-2">
+                        <button class="px-3 py-1.5 text-xs font-medium bg-neutral-800 text-neutral-200 rounded-md">Blitz</button>
+                        <button class="px-3 py-1.5 text-xs font-medium text-neutral-500 hover:text-neutral-300 transition-colors">Rapid</button>
+                        <button class="px-3 py-1.5 text-xs font-medium text-neutral-500 hover:text-neutral-300 transition-colors">Classical</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Player 1 -->
+                    <div class="bg-neutral-900/50 border border-neutral-800 p-4 rounded-xl flex items-center gap-4 hover:-translate-y-1 hover:border-neutral-700 transition-all duration-300 cursor-pointer">
+                        <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Magnus" alt="Avatar" class="w-12 h-12 rounded-full bg-neutral-800">
+                        <div>
+                            <div class="flex items-center gap-2 mb-0.5">
+                                <span class="text-xs font-medium bg-amber-500/10 text-amber-500 px-1.5 py-0.5 rounded text-[10px]">GM</span>
+                                <h4 class="text-sm font-medium text-neutral-200">Magnus C.</h4>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-xs text-neutral-500">
+                                <span>Norway</span>
+                                <span class="w-1 h-1 rounded-full bg-neutral-700"></span>
+                                <span class="text-neutral-400 font-medium">2882</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Player 2 -->
+                    <div class="bg-neutral-900/50 border border-neutral-800 p-4 rounded-xl flex items-center gap-4 hover:-translate-y-1 hover:border-neutral-700 transition-all duration-300 cursor-pointer">
+                        <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Hikaru" alt="Avatar" class="w-12 h-12 rounded-full bg-neutral-800">
+                        <div>
+                            <div class="flex items-center gap-2 mb-0.5">
+                                <span class="text-xs font-medium bg-amber-500/10 text-amber-500 px-1.5 py-0.5 rounded text-[10px]">GM</span>
+                                <h4 class="text-sm font-medium text-neutral-200">Hikaru N.</h4>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-xs text-neutral-500">
+                                <span>USA</span>
+                                <span class="w-1 h-1 rounded-full bg-neutral-700"></span>
+                                <span class="text-neutral-400 font-medium">2875</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Player 3 -->
+                    <div class="bg-neutral-900/50 border border-neutral-800 p-4 rounded-xl flex items-center gap-4 hover:-translate-y-1 hover:border-neutral-700 transition-all duration-300 cursor-pointer">
+                        <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Ding" alt="Avatar" class="w-12 h-12 rounded-full bg-neutral-800">
+                        <div>
+                            <div class="flex items-center gap-2 mb-0.5">
+                                <span class="text-xs font-medium bg-amber-500/10 text-amber-500 px-1.5 py-0.5 rounded text-[10px]">GM</span>
+                                <h4 class="text-sm font-medium text-neutral-200">Ding L.</h4>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-xs text-neutral-500">
+                                <span>China</span>
+                                <span class="w-1 h-1 rounded-full bg-neutral-700"></span>
+                                <span class="text-neutral-400 font-medium">2811</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Player 4 -->
+                    <div class="bg-neutral-900/50 border border-neutral-800 p-4 rounded-xl flex items-center gap-4 hover:-translate-y-1 hover:border-neutral-700 transition-all duration-300 cursor-pointer">
+                        <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Fabi" alt="Avatar" class="w-12 h-12 rounded-full bg-neutral-800">
+                        <div>
+                            <div class="flex items-center gap-2 mb-0.5">
+                                <span class="text-xs font-medium bg-amber-500/10 text-amber-500 px-1.5 py-0.5 rounded text-[10px]">GM</span>
+                                <h4 class="text-sm font-medium text-neutral-200">Fabiano C.</h4>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-xs text-neutral-500">
+                                <span>USA</span>
+                                <span class="w-1 h-1 rounded-full bg-neutral-700"></span>
+                                <span class="text-neutral-400 font-medium">2804</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Leaderboard Section -->
+            <section id="sec-leaderboard" class="content-section hide-section fade-in max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-semibold tracking-tight text-neutral-100 mb-2">Global Leaderboard</h2>
+                    <p class="text-sm text-neutral-500">The highest rated active players this season.</p>
+                </div>
+                
+                <div class="bg-[#0a0a0a] border border-neutral-800 rounded-xl overflow-hidden shadow-sm">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm whitespace-nowrap">
+                            <thead class="bg-neutral-900/50 border-b border-neutral-800">
+                                <tr>
+                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider w-16 text-center">Rank</th>
+                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider">Player</th>
+                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider text-right">Rating</th>
+                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider text-right">Win Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-neutral-800/50">
+                                <tr class="hover:bg-neutral-900/30 transition-colors">
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-500/10 text-amber-500 font-semibold text-xs border border-amber-500/20">1</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Magnus" class="w-8 h-8 rounded-full bg-neutral-800">
+                                            <span class="font-medium text-neutral-200">MagnusCarlsen</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-right font-medium text-neutral-300">2882</td>
+                                    <td class="px-6 py-4 text-right text-neutral-500">68.4%</td>
+                                </tr>
+                                <tr class="hover:bg-neutral-900/30 transition-colors">
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-neutral-400/10 text-neutral-300 font-semibold text-xs border border-neutral-400/20">2</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Hikaru" class="w-8 h-8 rounded-full bg-neutral-800">
+                                            <span class="font-medium text-neutral-200">Hikaru</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-right font-medium text-neutral-300">2875</td>
+                                    <td class="px-6 py-4 text-right text-neutral-500">65.2%</td>
+                                </tr>
+                                <tr class="hover:bg-neutral-900/30 transition-colors">
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange-600/10 text-orange-500 font-semibold text-xs border border-orange-600/20">3</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Ding" class="w-8 h-8 rounded-full bg-neutral-800">
+                                            <span class="font-medium text-neutral-200">DingLiren</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-right font-medium text-neutral-300">2811</td>
+                                    <td class="px-6 py-4 text-right text-neutral-500">62.1%</td>
+                                </tr>
+                                <tr class="hover:bg-neutral-900/30 transition-colors">
+                                    <td class="px-6 py-4 text-center text-neutral-600 text-xs font-medium">4</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Fabi" class="w-8 h-8 rounded-full bg-neutral-800 opacity-80">
+                                            <span class="font-medium text-neutral-400">FabianoCaruana</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-right font-medium text-neutral-400">2804</td>
+                                    <td class="px-6 py-4 text-right text-neutral-600">60.8%</td>
+                                </tr>
+                                <tr class="hover:bg-neutral-900/30 transition-colors">
+                                    <td class="px-6 py-4 text-center text-neutral-600 text-xs font-medium">5</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Nepo" class="w-8 h-8 rounded-full bg-neutral-800 opacity-80">
+                                            <span class="font-medium text-neutral-400">Nepo</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-right font-medium text-neutral-400">2795</td>
+                                    <td class="px-6 py-4 text-right text-neutral-600">59.3%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Profile Section -->
+            <section id="sec-profile" class="content-section hide-section fade-in max-w-3xl mx-auto">
+                <div class="bg-neutral-900/50 border border-neutral-800 rounded-2xl overflow-hidden mt-8">
+                    <!-- Cover Photo -->
+                    <div class="h-32 bg-gradient-to-r from-blue-900/40 to-neutral-900 border-b border-neutral-800 relative"></div>
+                    
+                    <!-- Profile Info -->
+                    <div class="px-6 pb-6 relative">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end -mt-10 mb-6 gap-4">
+                            <div class="flex items-end gap-4">
+                                <div class="w-24 h-24 rounded-xl bg-neutral-800 border-4 border-[#0a0a0a] overflow-hidden shrink-0">
+                                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="Profile" class="w-full h-full object-cover">
+                                </div>
+                                <div class="pb-1">
+                                    <h2 class="text-xl font-semibold tracking-tight text-neutral-100">FelixTheMaster</h2>
+                                    <p class="text-sm text-neutral-500">Joined March 2023</p>
+                                </div>
+                            </div>
+                            <button class="bg-transparent border border-neutral-700 hover:bg-neutral-800 text-neutral-300 px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap">
+                                Edit Profile
+                            </button>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                            <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                                <div class="text-xs text-neutral-500 mb-1">Blitz Rating</div>
+                                <div class="text-xl font-medium text-neutral-200">1523</div>
+                            </div>
+                            <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                                <div class="text-xs text-neutral-500 mb-1">Rapid Rating</div>
+                                <div class="text-xl font-medium text-neutral-200">1480</div>
+                            </div>
+                            <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                                <div class="text-xs text-neutral-500 mb-1">Total Games</div>
+                                <div class="text-xl font-medium text-neutral-200">1,248</div>
+                            </div>
+                            <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                                <div class="text-xs text-neutral-500 mb-1">Win Rate</div>
+                                <div class="text-xl font-medium text-emerald-400">52.4%</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Visual representation of stats -->
+                        <div class="bg-[#0a0a0a] border border-neutral-800 rounded-xl p-5">
+                            <h3 class="text-sm font-medium text-neutral-300 mb-4">Match Results</h3>
+                            <div class="w-full h-2 bg-neutral-800 rounded-full overflow-hidden flex">
+                                <div class="h-full bg-emerald-500" style="width: 52.4%"></div>
+                                <div class="h-full bg-neutral-600" style="width: 10%"></div>
+                                <div class="h-full bg-rose-500" style="width: 37.6%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs mt-3 text-neutral-500 font-medium">
+                                <span class="text-emerald-500">654 Wins</span>
+                                <span class="text-neutral-500">125 Draws</span>
+                                <span class="text-rose-500">469 Losses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body></html>
