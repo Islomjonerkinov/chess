@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="chess-king-regular-full.svg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+</head>
+
+<body class="h-screen overflow-hidden flex antialiased selection:bg-neutral-800">
+    <!-- Sidebar -->
+    <aside class="w-16 md:w-64 bg-[#0a0a0a] border-r border-neutral-900 flex flex-col shrink-0 transition-all duration-300 z-20 relative">
+        <div class="h-16 flex items-center justify-center md:justify-start md:px-6 border-b border-neutral-900 shrink-0">
+            <div class="font-semibold tracking-tighter text-xl text-neutral-100 flex items-center gap-2">
+                <iconify-icon icon="solar:crown-minimalistic-linear" class="text-2xl md:hidden"></iconify-icon>
+                <span class="hidden md:block">CHESS</span>
+            </div>
+        </div>
+
+        <nav class="flex-1 p-3 space-y-1 overflow-y-auto">
+            <button data-target="home" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 bg-neutral-900 border border-neutral-800 text-neutral-100 shadow-sm">
+                <iconify-icon icon="solar:home-2-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block" data-i18n="navHome"><a href="./index.html">Home</a></span>
+            </button>
+            <button data-target="news" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:document-text-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block" data-i18n="navNews"><a href="news.html">News</a></span>
+            </button>
+            <button data-target="players" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:users-group-rounded-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block" data-i18n="navPlayers"><a href="./players.html">Players</a></span>
+            </button>
+            <button data-target="leaderboard" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:cup-star-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block" data-i18n="navLeaderboard"><a href="./leaderboard.html">Leaderboard</a></span>
+            </button>
+            <button data-target="profile" id="button" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:user-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block" data-i18n="navProfile"><a href="./profile.html">Profile</a></span>
+            </button>
+        </nav>
+
+        <div class="p-4 border-t border-neutral-900 hidden md:block">
+            <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4 text-center">
+                <div class="text-xs font-medium text-neutral-400 mb-2" data-i18n="upgradeTitle">Upgrade to Pro</div>
+                <button class="w-full bg-neutral-100 hover:bg-white text-black text-xs font-medium py-1.5 rounded-md transition-colors">
+                    <span data-i18n="viewPlans">View Plans</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+    <div class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+        <section id="sec-profile" class="content-section  fade-in max-w-3xl mx-auto">
+            <div class="bg-neutral-900/50 border border-neutral-800 rounded-2xl overflow-hidden mt-8">
+                <!-- Cover Photo -->
+                <div class="h-32 bg-gradient-to-r from-blue-900/40 to-neutral-900 border-b border-neutral-800 relative">
+                </div>
+
+                <!-- Profile Info -->
+                <div class="px-6 pb-6 relative">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end -mt-10 mb-6 gap-4">
+                        <div class="flex items-end gap-4">
+                            <div class="w-24 h-24 rounded-xl bg-neutral-800 border-4 border-[#0a0a0a] overflow-hidden shrink-0">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="Profile" class="w-full h-full object-cover">
+                            </div>
+                            <div class="pb-1">
+                                <h2 class="text-xl font-semibold tracking-tight text-neutral-100">FelixTheMaster
+                                </h2>
+                                <p class="text-sm text-neutral-500" data-i18n="joinedDate">Joined March 2023</p>
+                            </div>
+                        </div>
+                        <button class="bg-transparent border border-neutral-700 hover:bg-neutral-800 text-neutral-300 px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap" data-i18n="editProfile">
+                                Edit Profile
+                            </button>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                            <div class="text-xs text-neutral-500 mb-1" data-i18n="blitzRating">Blitz Rating</div>
+                            <div class="text-xl font-medium text-neutral-200">1523</div>
+                        </div>
+                        <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                            <div class="text-xs text-neutral-500 mb-1" data-i18n="rapidRating">Rapid Rating</div>
+                            <div class="text-xl font-medium text-neutral-200">1480</div>
+                        </div>
+                        <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                            <div class="text-xs text-neutral-500 mb-1" data-i18n="totalGames">Total Games</div>
+                            <div class="text-xl font-medium text-neutral-200">1,248</div>
+                        </div>
+                        <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                            <div class="text-xs text-neutral-500 mb-1" data-i18n="winRate">Win Rate</div>
+                            <div class="text-xl font-medium text-emerald-400">52.4%</div>
+                        </div>
+                    </div>
+
+                    <!-- Visual representation of stats -->
+                    <div class="bg-[#0a0a0a] border border-neutral-800 rounded-xl p-5">
+                        <h3 class="text-sm font-medium text-neutral-300 mb-4">Match Results</h3>
+                        <div class="w-full h-2 bg-neutral-800 rounded-full overflow-hidden flex">
+                            <div class="h-full bg-emerald-500" style="width: 52.4%"></div>
+                            <div class="h-full bg-neutral-600" style="width: 10%"></div>
+                            <div class="h-full bg-rose-500" style="width: 37.6%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs mt-3 text-neutral-500 font-medium">
+                            <span class="text-emerald-500">654 Wins</span>
+                            <span class="text-neutral-500">125 Draws</span>
+                            <span class="text-rose-500">469 Losses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+
+</html>
