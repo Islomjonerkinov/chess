@@ -89,11 +89,3 @@ body {
         transform: translateY(0);
     }
 }
-
-#button {
-    background: none;
-    border: solid 1px #404040;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-}
