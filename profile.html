@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modern Chess Platform</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="chess-king-regular-full.svg" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,29 +21,27 @@
                 <span class="hidden md:block">CHESS</span>
             </div>
         </div>
-
-
         <nav class="flex-1 p-3 space-y-1 overflow-y-auto">
-            <button data-target="home" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 bg-neutral-900 border border-neutral-800 text-neutral-100 shadow-sm">
+            <a href="index.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
                 <iconify-icon icon="solar:home-2-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
-                <span class="hidden md:block"  data-i18n="navHome"><a href="index.html">Home</a></span>
-            </button>
-            <button data-target="news" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <span class="hidden md:block" data-i18n="navHome">Home</span>
+            </a>
+            <a href="news.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
                 <iconify-icon icon="solar:document-text-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
-                <span class="hidden md:block" data-i18n="navNews"><a href="news.html">News</a></span>
-            </button>
-            <button data-target="players" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <span class="hidden md:block" data-i18n="navNews">News</span>
+            </a>
+            <a href="players.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
                 <iconify-icon icon="solar:users-group-rounded-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
-                <span class="hidden md:block" data-i18n="navPlayers"><a href="players.html">Players</a></span>
-            </button>
-            <button data-target="leaderboard" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <span class="hidden md:block" data-i18n="navPlayers">Players</span>
+            </a>
+            <a href="leaderboard.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
                 <iconify-icon icon="solar:cup-star-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
-                <span class="hidden md:block" data-i18n="navLeaderboard"><a href="leaderboard.html">Leaderboard</a></span>
-            </button>
-            <button data-target="profile" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <span class="hidden md:block" data-i18n="navLeaderboard">Leaderboard</span>
+            </a>
+            <a href="profile.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 bg-neutral-900 border border-neutral-800 text-neutral-100 shadow-sm">
                 <iconify-icon icon="solar:user-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
-                <span class="hidden md:block" data-i18n="navProfile"><a href="profile.html">Profile</a></span>
-            </button>
+                <span class="hidden md:block" data-i18n="navProfile">Profile</span>
+            </a>
         </nav>
 
 
@@ -132,13 +130,6 @@
     </div>
 
     <script src="script.js"></script>
-
-</body>
-
-</html>
-
-
-<script src="script.js"></script>
 
 </body>
 
