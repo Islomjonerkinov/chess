@@ -57,75 +57,106 @@
             <span class="home-btn-arrow">↗</span>
         </a>
 
-        <div class="p-4 border-t border-neutral-900 hidden md:block">
-            <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4 text-center">
-                <div class="text-xs font-medium text-neutral-400 mb-2" data-i18n="upgradeTitle">Upgrade to Pro</div>
-                <button class="w-full bg-neutral-100 hover:bg-white text-black text-xs font-medium py-1.5 rounded-md transition-colors">
-                    <span data-i18n="viewPlans">View Plans</span>
+        <a href="pro.html" class="block">
+            <div class="p-4 border-t border-neutral-900 hidden md:block hover:bg-neutral-900/50 transition-colors cursor-pointer">
+                <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4 text-center group">
+                    <div class="text-xs font-medium text-neutral-400 mb-2 group-hover:text-violet-400 transition-colors" data-i18n="upgradeTitle">Upgrade to Pro</div>
+                    <button class="w-full bg-neutral-100 hover:bg-white text-black text-xs font-medium py-1.5 rounded-md transition-colors">
+                        <span data-i18n="viewPlans">View Plans</span>
+                    </button>
+                </div>
+            </div>
+        </a>
+    </aside>
+    <!-- Main Content Layout -->
+    <main class="flex-1 flex flex-col min-w-0 bg-[#000000]">
+
+        <!-- Navbar -->
+        <header class="h-16 flex items-center justify-between px-6 border-b border-neutral-900 shrink-0 bg-[#0a0a0a]/80 backdrop-blur-md sticky top-0 z-10">
+            <div class="flex items-center bg-neutral-900/50 border border-neutral-800 rounded-full px-3 py-1.5 w-48 md:w-80 focus-within:border-neutral-700 focus-within:bg-neutral-900 transition-colors">
+                <iconify-icon icon="solar:magnifer-linear" stroke-width="1.5" class="text-neutral-500 text-lg mr-2"></iconify-icon>
+                <input type="text" placeholder="Search..." data-i18n-placeholder="searchPlaceholder" class="bg-transparent text-sm text-neutral-200 w-full outline-none placeholder:text-neutral-600">
+            </div>
+
+            <div class="flex items-center gap-2 border-l border-neutral-900 pl-4 ml-4">
+                <div class="hidden sm:flex items-center gap-2">
+                    <button class="lang-switch px-2 py-1 rounded-full text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors" data-lang="en">EN</button>
+                    <button class="lang-switch px-2 py-1 rounded-full text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors" data-lang="ru">RU</button>
+                    <button class="lang-switch px-2 py-1 rounded-full text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors" data-lang="uz">UZ</button>
+                </div>
+                <button class="text-neutral-500 hover:text-neutral-200 transition-colors relative">
+                    <iconify-icon icon="solar:bell-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                    <span
+                        class="absolute top-0 right-0 w-2 h-2 bg-blue-500 rounded-full border border-[#0a0a0a]"></span>
+                </button>
+                <button class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 overflow-hidden hover:opacity-80 transition-opacity">
+                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="Profile"
+                        class="w-full h-full object-cover">
                 </button>
             </div>
+        </header>
+
+        <!-- Dynamic Sections -->
+        <div class="flex-1 overflow-y-auto p-4 md:p-8 relative flex flex-col">
+            <section id="sec-profile" class="content-section fade-in max-w-3xl mx-auto w-full my-auto">
+                <div class="bg-neutral-900/50 border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl">
+                    <!-- Cover Photo -->
+                    <div class="h-32 bg-gradient-to-r from-blue-900/40 to-neutral-900 border-b border-neutral-800 relative">
+                    </div>
+
+                    <!-- Profile Info -->
+                    <div class="px-6 pb-6 relative">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end -mt-10 mb-6 gap-4">
+                            <div class="flex items-end gap-4">
+                                <div class="w-24 h-24 rounded-xl bg-neutral-800 border-4 border-[#0a0a0a] overflow-hidden shrink-0 shadow-lg">
+                                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="Profile" class="w-full h-full object-cover">
+                                </div>
+                                <div class="pb-1">
+                                    <h2 class="text-2xl font-bold tracking-tight text-neutral-100">Alfaniko</h2>
+                                    <p class="text-sm text-neutral-500" data-i18n="joinedDate">Joined March 2023</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                            <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                                <div class="text-xs text-neutral-500 mb-1" data-i18n="blitzRating">Blitz Rating</div>
+                                <div class="text-xl font-medium text-neutral-200">1523</div>
+                            </div>
+                            <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                                <div class="text-xs text-neutral-500 mb-1" data-i18n="rapidRating">Rapid Rating</div>
+                                <div class="text-xl font-medium text-neutral-200">1480</div>
+                            </div>
+                            <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                                <div class="text-xs text-neutral-500 mb-1" data-i18n="totalGames">Total Games</div>
+                                <div class="text-xl font-medium text-neutral-200">1,248</div>
+                            </div>
+                            <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
+                                <div class="text-xs text-neutral-500 mb-1" data-i18n="winRate">Win Rate</div>
+                                <div class="text-xl font-medium text-emerald-400">52.4%</div>
+                            </div>
+                        </div>
+
+                        <!-- Visual representation of stats -->
+                        <div class="bg-[#0a0a0a] border border-neutral-800 rounded-xl p-5">
+                            <h3 class="text-sm font-medium text-neutral-300 mb-4">Match Results</h3>
+                            <div class="w-full h-2 bg-neutral-800 rounded-full overflow-hidden flex">
+                                <div class="h-full bg-emerald-500" style="width: 52.4%"></div>
+                                <div class="h-full bg-neutral-600" style="width: 10%"></div>
+                                <div class="h-full bg-rose-500" style="width: 37.6%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs mt-3 text-neutral-500 font-medium">
+                                <span class="text-emerald-500">654 Wins</span>
+                                <span class="text-neutral-500">125 Draws</span>
+                                <span class="text-rose-500">469 Losses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </aside>
-    <div class="flex-1 overflow-y-auto p-4 md:p-8 relative">
-        <section id="sec-profile" class="content-section  fade-in max-w-3xl mx-auto">
-            <div class="bg-neutral-900/50 border border-neutral-800 rounded-2xl overflow-hidden mt-8">
-                <!-- Cover Photo -->
-                <div class="h-32 bg-gradient-to-r from-blue-900/40 to-neutral-900 border-b border-neutral-800 relative">
-                </div>
-
-                <!-- Profile Info -->
-                <div class="px-6 pb-6 relative">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end -mt-10 mb-6 gap-4">
-                        <div class="flex items-end gap-4">
-                            <div class="w-24 h-24 rounded-xl bg-neutral-800 border-4 border-[#0a0a0a] overflow-hidden shrink-0">
-                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="Profile" class="w-full h-full object-cover">
-                            </div>
-                            <div class="pb-1">
-                                <h2 class="text-xl font-semibold tracking-tight text-neutral-100">FelixTheMaster
-                                </h2>
-                                <p class="text-sm text-neutral-500" data-i18n="joinedDate">Joined March 2023</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Stats Grid -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                        <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
-                            <div class="text-xs text-neutral-500 mb-1" data-i18n="blitzRating">Blitz Rating</div>
-                            <div class="text-xl font-medium text-neutral-200">1523</div>
-                        </div>
-                        <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
-                            <div class="text-xs text-neutral-500 mb-1" data-i18n="rapidRating">Rapid Rating</div>
-                            <div class="text-xl font-medium text-neutral-200">1480</div>
-                        </div>
-                        <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
-                            <div class="text-xs text-neutral-500 mb-1" data-i18n="totalGames">Total Games</div>
-                            <div class="text-xl font-medium text-neutral-200">1,248</div>
-                        </div>
-                        <div class="bg-[#0a0a0a] border border-neutral-800 p-4 rounded-xl">
-                            <div class="text-xs text-neutral-500 mb-1" data-i18n="winRate">Win Rate</div>
-                            <div class="text-xl font-medium text-emerald-400">52.4%</div>
-                        </div>
-                    </div>
-
-                    <!-- Visual representation of stats -->
-                    <div class="bg-[#0a0a0a] border border-neutral-800 rounded-xl p-5">
-                        <h3 class="text-sm font-medium text-neutral-300 mb-4">Match Results</h3>
-                        <div class="w-full h-2 bg-neutral-800 rounded-full overflow-hidden flex">
-                            <div class="h-full bg-emerald-500" style="width: 52.4%"></div>
-                            <div class="h-full bg-neutral-600" style="width: 10%"></div>
-                            <div class="h-full bg-rose-500" style="width: 37.6%"></div>
-                        </div>
-                        <div class="flex justify-between text-xs mt-3 text-neutral-500 font-medium">
-                            <span class="text-emerald-500">654 Wins</span>
-                            <span class="text-neutral-500">125 Draws</span>
-                            <span class="text-rose-500">469 Losses</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+    </main>
 
     <script src="script.js"></script>
 

@@ -29,11 +29,11 @@ const translations = {
         totalGames: 'Total Games',
         winRate: 'Win Rate',
         cardTopic1: 'Tournaments',
-        cardTitle1: 'World Championship 2024 Dates Announced',
+        cardTitle1: 'World Championship 2026 Dates Announced',
         cardText1: 'The highly anticipated match will take place this November, featuring the reigning champion against the candidates winner.',
         cardTopic2: 'Updates',
-        cardTitle2: 'Platform Update: v2.4 introduces AI Analysis',
-        cardText2: 'Review your games with our brand new engine integration. Find blunders, mistakes, and brilliant moves instantly.',
+        cardTitle2: 'Sindarov wins the Candidates Tournament!',
+        cardText2: 'Uzbek grandmaster Javokhir Sindarov clinched the 2026 Candidates Tournament in Cyprus, earning the right to challenge World Champion Gukesh for the chess crown.',
         cardTopic3: 'Community',
         cardTitle3: 'Grandmaster Speedrun Challenge Concludes',
         cardText3: 'Watch highlights from the recent 24-hour stream where community members tested their skills against a GM.',
@@ -43,7 +43,24 @@ const translations = {
         leaderboardRank: 'Rank',
         leaderboardPlayer: 'Player',
         leaderboardRating: 'Rating',
-        leaderboardWinRate: 'Win Rate'
+        leaderboardWinRate: 'Win Rate',
+        upgradeTitlePage: 'Upgrade to Pro',
+        upgradeDesc: 'Unlock the full potential of your chess journey with advanced analytics and personalized training.',
+        proVariant: 'Pro',
+        proVariantDesc: 'For dedicated players',
+        maxVariant: 'Max',
+        maxVariantDesc: 'For grandmaster aspirations',
+        freeTrialBtn: '1 Month Free',
+        modalTitle: 'Congratulations!',
+        modalDesc: 'You got the paid version free for 1 month.',
+        closeBtn: 'Close',
+        proFeat1: 'Unlimited AI Game Analysis',
+        proFeat2: '50+ Daily Tactical Puzzles',
+        proFeat3: 'Ad-free Experience',
+        maxFeat1: 'Everything in Pro',
+        maxFeat2: '1-on-1 Grandmaster Tips',
+        maxFeat3: 'Priority Matchmaking',
+        maxFeat4: 'Exclusive Tournaments'
     },
     ru: {
         navHome: 'Главная',
@@ -75,11 +92,11 @@ const translations = {
         totalGames: 'Всего игр',
         winRate: 'Процент побед',
         cardTopic1: 'Турниры',
-        cardTitle1: 'Объявлены даты чемпионата мира 2024',
+        cardTitle1: 'Объявлены даты чемпионата мира 2026',
         cardText1: 'Ожидаемый матч пройдет в ноябре, где встретятся действующий чемпион и победитель кандидатов.',
         cardTopic2: 'Обновления',
-        cardTitle2: 'Обновление платформы: v2.4 вводит ИИ-анализ',
-        cardText2: 'Просматривайте свои партии с новым движком. Находите ошибки, промахи и блестящие ходы мгновенно.',
+        cardTitle2:' Синдаров победил на турнире претендентов!',
+        cardText2: 'Узбекский гроссмейстер Жавохир Синдаров досрочно выиграл турнир претендентов 2026 на Кипре и завоевал право сразиться с чемпионом мира Гукешем за шахматную корону.',
         cardTopic3: 'Сообщество',
         cardTitle3: 'Завершен марафон гроссмейстеров',
         cardText3: 'Смотрите лучшие моменты 24-часового стрима, где участники проверяли свои навыки против гроссмейстера.',
@@ -89,7 +106,24 @@ const translations = {
         leaderboardRank: 'Место',
         leaderboardPlayer: 'Игрок',
         leaderboardRating: 'Рейтинг',
-        leaderboardWinRate: 'Процент побед'
+        leaderboardWinRate: 'Процент побед',
+        upgradeTitlePage: 'Обновить до Pro',
+        upgradeDesc: 'Раскройте весь потенциал вашей игры с помощью продвинутой аналитики и тренировок.',
+        proVariant: 'Про (Pro)',
+        proVariantDesc: 'Для преданных игроков',
+        maxVariant: 'Макс (Max)',
+        maxVariantDesc: 'Для будущих гроссмейстеров',
+        freeTrialBtn: '1 Месяц Бесплатно',
+        modalTitle: 'Поздравляем!',
+        modalDesc: 'Вы получили платную версию бесплатно на 1 месяц.',
+        closeBtn: 'Закрыть',
+        proFeat1: 'Неограниченный ИИ-анализ партий',
+        proFeat2: '50+ ежедневных тактических задач',
+        proFeat3: 'Без рекламы',
+        maxFeat1: 'Все функции Pro',
+        maxFeat2: 'Личные советы от гроссмейстера',
+        maxFeat3: 'Приоритетный подбор соперников',
+        maxFeat4: 'Эксклюзивные турниры'
     },
     uz: {
         navHome: 'Bosh sahifa',
@@ -121,11 +155,11 @@ const translations = {
         totalGames: 'Umumiy o‘yinlar',
         winRate: 'G‘alaba foizi',
         cardTopic1: 'Turnirlar',
-        cardTitle1: '2024 yil Jahon chempionati sanalari e’lon qilindi',
+        cardTitle1: '2026 yil Jahon chempionati sanalari e’lon qilindi',
         cardText1: 'Kutilgan match bu noyabr oyida bo‘lib o‘tadi, amaldagi chempion va nomzodlar g‘olibi o‘rtasida.',
         cardTopic2: 'Yangilanishlar',
-        cardTitle2: 'Platforma yangilanishi: v2.4 AI tahlilini joriy etdi',
-        cardText2: 'O‘yinlaringizni yangi dvigatel integratsiyasi bilan ko‘rib chiqing. Xatolarni, omadsizliklarni va ajoyib g‘oyalarni darhol toping.',
+        cardTitle2: 'Sindarov — Nomzodlar turniri golibi',
+        cardText2:  'Ozbekistonlik grossmeyster Javohir Sindarov 2026-yilgi Nomzodlar turnirini Kiprda muddatidan oldin zabt etib, jahon chempioni Gukesh bilan final oynash huquqini qolga kiritdi.',
         cardTopic3: 'Hamjamiyat',
         cardTitle3: 'Grandmaster Speedrun tanlovi yakunlandi',
         cardText3: 'GM ga qarshi o‘z mahoratlarini sinab ko‘rgan jamoa a’zolari 24 soatlik efirning eng yaxshi lahzalarini tomosha qiling.',
@@ -135,7 +169,24 @@ const translations = {
         leaderboardRank: 'O‘rin',
         leaderboardPlayer: 'O‘yinchi',
         leaderboardRating: 'Reyting',
-        leaderboardWinRate: 'G‘alaba foizi'
+        leaderboardWinRate: 'G‘alaba foizi',
+        upgradeTitlePage: 'Pro-ga yangilash',
+        upgradeDesc: 'Murakkab tahlillar va shaxsiy mashg‘ulotlar orqali shaxmatdagi imkoniyatlaringizni to‘liq oching.',
+        proVariant: 'Pro',
+        proVariantDesc: 'Jiddiy o‘yinchilar uchun',
+        maxVariant: 'Max',
+        maxVariantDesc: 'Grossmeysterlik sari',
+        freeTrialBtn: '1 Oy Bepul',
+        modalTitle: 'Tabriklaymiz!',
+        modalDesc: 'Siz 1 oylik bepul pullik versiyani oldingiz.',
+        closeBtn: 'Yopish',
+        proFeat1: 'Cheksiz AI o‘yin tahlili',
+        proFeat2: '50+ kunlik taktik masalalar',
+        proFeat3: 'Reklamasiz interfeys',
+        maxFeat1: 'Pro-dagi barcha imkoniyatlar',
+        maxFeat2: 'Grossmeysterdan 1-ga-1 maslahatlar',
+        maxFeat3: 'Prioritetli raqib tanlash',
+        maxFeat4: 'Eksklyuziv turnirlar'
     }
 }
 const navItems = document.querySelectorAll('.nav-item');
@@ -185,6 +236,31 @@ languageButtons.forEach(button => {
 
 const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
 setLanguage(savedLanguage);
+
+const freeTrialBtns = document.querySelectorAll('.free-trial-btn');
+const successModal = document.getElementById('success-modal');
+const closeModalBtn = document.getElementById('close-modal-btn');
+
+if (freeTrialBtns.length > 0 && successModal && closeModalBtn) {
+    freeTrialBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+        });
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        successModal.classList.add('hidden');
+        successModal.classList.remove('flex');
+    });
+
+    successModal.addEventListener('click', (e) => {
+        if (e.target === successModal) {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+        }
+    });
+}
 
 //  function setActiveSection(targetId) {
 //      // Hide all sections
