@@ -60,7 +60,15 @@ const translations = {
         maxFeat1: 'Everything in Pro',
         maxFeat2: '1-on-1 Grandmaster Tips',
         maxFeat3: 'Priority Matchmaking',
-        maxFeat4: 'Exclusive Tournaments'
+        maxFeat4: 'Exclusive Tournaments',
+        playTitle: 'Play with Computer',
+        playSubtitle: 'Challenge our advanced AI and improve your skills.',
+        newGame: 'New Game',
+        resign: 'Resign',
+        draw: 'Offer Draw',
+        computerThinking: 'Computer is thinking...',
+        playerYou: 'You',
+        playerComputer: 'Computer (Level 5)'
     },
     ru: {
         navHome: 'Главная',
@@ -123,7 +131,15 @@ const translations = {
         maxFeat1: 'Все функции Pro',
         maxFeat2: 'Личные советы от гроссмейстера',
         maxFeat3: 'Приоритетный подбор соперников',
-        maxFeat4: 'Эксклюзивные турниры'
+        maxFeat4: 'Эксклюзивные турниры',
+        playTitle: 'Игра с компьютером',
+        playSubtitle: 'Бросьте вызов нашему продвинутому ИИ и улучшите свои навыки.',
+        newGame: 'Новая игра',
+        resign: 'Сдаться',
+        draw: 'Предложить ничью',
+        computerThinking: 'Компьютер думает...',
+        playerYou: 'Вы',
+        playerComputer: 'Компьютер (Уровень 5)'
     },
     uz: {
         navHome: 'Bosh sahifa',
@@ -186,9 +202,18 @@ const translations = {
         maxFeat1: 'Pro-dagi barcha imkoniyatlar',
         maxFeat2: 'Grossmeysterdan 1-ga-1 maslahatlar',
         maxFeat3: 'Prioritetli raqib tanlash',
-        maxFeat4: 'Eksklyuziv turnirlar'
+        maxFeat4: 'Eksklyuziv turnirlar',
+        playTitle: 'Kompyuter bilan o‘yin',
+        playSubtitle: 'Bizning ilg‘or AI-ga qarshi bellashing va mahoratingizni oshiring.',
+        newGame: 'Yangi o‘yin',
+        resign: 'Taslim bo‘lish',
+        draw: 'Durang taklif qilish',
+        computerThinking: 'Kompyuter o‘ylamoqda...',
+        playerYou: 'Siz',
+        playerComputer: 'Kompyuter (5-daraja)'
     }
-}
+    }
+
 const navItems = document.querySelectorAll('.nav-item');
 const sections = document.querySelectorAll('.content-section');
 const languageButtons = document.querySelectorAll('[data-lang]');
@@ -241,163 +266,3 @@ const freeTrialBtns = document.querySelectorAll('.free-trial-btn');
 const successModal = document.getElementById('success-modal');
 const closeModalBtn = document.getElementById('close-modal-btn');
 
-if (freeTrialBtns.length > 0 && successModal && closeModalBtn) {
-    freeTrialBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            successModal.classList.remove('hidden');
-            successModal.classList.add('flex');
-        });
-    });
-
-    closeModalBtn.addEventListener('click', () => {
-        successModal.classList.add('hidden');
-        successModal.classList.remove('flex');
-    });
-
-    successModal.addEventListener('click', (e) => {
-        if (e.target === successModal) {
-            successModal.classList.add('hidden');
-            successModal.classList.remove('flex');
-        }
-    });
-}
-
-//  function setActiveSection(targetId) {
-//      // Hide all sections
-//      sections.forEach(sec => sec.classList.add('hide-section'));
-
-//      // Show target section
-//      const targetSection = document.getElementById('sec-' + targetId);
-//      if (targetSection) {
-//          targetSection.classList.remove('hide-section');
-//      }
-
-//      // Update nav styles
-//      navItems.forEach(item => {
-//          if (item.dataset.target === targetId) {
-//              item.classList.add('bg-neutral-900', 'border-neutral-800', 'text-neutral-100', 'shadow-sm');
-//              item.classList.remove('text-neutral-500', 'border-transparent');
-//          } else {
-//              item.classList.remove('bg-neutral-900', 'border-neutral-800', 'text-neutral-100', 'shadow-sm');
-//              item.classList.add('text-neutral-500', 'border-transparent');
-//          }
-//      });
-//  }
-
-//  navItems.forEach(item => {
-//      item.addEventListener('click', () => {
-//          const target = item.dataset.target;
-//          setActiveSection(target);
-//      });
-//  });
-
-//  // Interactive Chessboard Logic
-//  const boardEl = document.getElementById('chessboard');
-
-//  // Piece layout: standard chess starting position
-//  // Lowercase = Black, Uppercase = White
-//  const initialBoard = [
-//      'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r',
-//      'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p',
-//      '', '', '', '', '', '', '', '',
-//      '', '', '', '', '', '', '', '',
-//      '', '', '', '', '', '', '', '',
-//      '', '', '', '', '', '', '', '',
-//      'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P',
-//      'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'
-//  ];
-
-//  let boardState = [...initialBoard];
-//  let selectedIdx = null;
-
-//  // Using solid unicode characters for both, differentiated by CSS color
-//  const pieceMap = {
-//      'r': '♜',
-//      'n': '♞',
-//      'b': '♝',
-//      'q': '♛',
-//      'k': '♚',
-//      'p': '♟',
-//      'R': '♜',
-//      'N': '♞',
-//      'B': '♝',
-//      'Q': '♛',
-//      'K': '♚',
-//      'P': '♟'
-//  };
-
-//  function isWhite(piece) {
-//      return piece >= 'A' && piece <= 'Z';
-//  }
-
-//  function renderBoard() {
-//      boardEl.innerHTML = '';
-//      for (let i = 0; i < 64; i++) {
-//          const square = document.createElement('div');
-
-//          // Color logic: alternating based on row/col
-//          const row = Math.floor(i / 8);
-//          const col = i % 8;
-//          const isLight = (row + col) % 2 === 0;
-
-//          square.className = `chess-square ${isLight ? 'square-light' : 'square-dark'}`;
-//          if (i === selectedIdx) {
-//              square.classList.add('selected');
-//          }
-
-//          // Add Piece
-//          const piece = boardState[i];
-//          if (piece) {
-//              const pieceEl = document.createElement('span');
-//              pieceEl.innerText = pieceMap[piece];
-//              pieceEl.className = isWhite(piece) ? 'piece-white' : 'piece-black';
-//              square.appendChild(pieceEl);
-//          }
-
-//          // Interaction
-//          square.addEventListener('click', () => handleSquareClick(i));
-
-//          // Highlight valid moves (simplified to just empty/capture pseudo-logic)
-//          if (selectedIdx !== null && selectedIdx !== i) {
-//              // For demo: pretend everything except own pieces is a valid move
-//              const selectedPiece = boardState[selectedIdx];
-//              const targetPiece = boardState[i];
-//              if (!targetPiece || (isWhite(selectedPiece) !== isWhite(targetPiece))) {
-//                  square.classList.add('valid-move');
-//              }
-//          }
-
-//          boardEl.appendChild(square);
-//      }
-//  }
-
-//  function handleSquareClick(idx) {
-//      if (selectedIdx === null) {
-//          // Select a piece
-//          if (boardState[idx] !== '') {
-//              selectedIdx = idx;
-//          }
-//      } else {
-//          // Clicking the same square deselects
-//          if (selectedIdx === idx) {
-//              selectedIdx = null;
-//          } else {
-//              const selectedPiece = boardState[selectedIdx];
-//              const targetPiece = boardState[idx];
-
-//              // Allow move to empty square or enemy piece
-//              if (!targetPiece || (isWhite(selectedPiece) !== isWhite(targetPiece))) {
-//                  boardState[idx] = boardState[selectedIdx];
-//                  boardState[selectedIdx] = '';
-//                  selectedIdx = null;
-//              } else {
-//                  // Change selection to other own piece
-//                  selectedIdx = idx;
-//              }
-//          }
-//      }
-//      renderBoard();
-//  }
-
-//  // Initialize
-//  renderBoard();

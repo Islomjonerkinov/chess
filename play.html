@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Chess Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="chess-king-regular-full.svg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+</head>
+
+<body class="h-screen overflow-hidden flex antialiased selection:bg-neutral-800">
+    <!-- Sidebar -->
+    <aside class="w-16 md:w-64 bg-[#0a0a0a] border-r border-neutral-900 flex flex-col shrink-0 transition-all duration-300 z-20 relative">
+        <div class="h-16 flex items-center justify-center md:justify-start md:px-6 border-b border-neutral-900 shrink-0">
+            <div class="font-semibold tracking-tighter text-xl text-neutral-100 flex items-center gap-2">
+                <iconify-icon icon="solar:crown-minimalistic-linear" class="text-2xl md:hidden"></iconify-icon>
+                <span class="hidden md:block">CHESS</span>
+            </div>
+        </div>
+        <nav class="flex-1 p-3 space-y-1 overflow-y-auto">
+            <a href="index.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:home-2-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block" data-i18n="navHome">Home</span>
+            </a>
+            <a href="news.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:document-text-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block" data-i18n="navNews">News</span>
+            </a>
+            <a href="players.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:users-group-rounded-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block" data-i18n="navPlayers">Players</span>
+            </a>
+            <a href="leaderboard.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+                <iconify-icon icon="solar:cup-star-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block" data-i18n="navLeaderboard">Leaderboard</span>
+            </a>
+            <a href="profile.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 bg-neutral-900 border border-neutral-800 text-neutral-100 shadow-sm">
+                <iconify-icon icon="solar:user-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                <span class="hidden md:block" data-i18n="navProfile">Profile</span>
+            </a>
+        </nav>
+
+
+        <a href="https://home-page-pied-nine.vercel.app/" class="home-btn" aria-label="Go to home page">
+            <span class="home-btn-icon">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <polyline points="9 22 9 12 15 12 15 22"/>
+    </svg>
+  </span>
+            <span class="home-btn-label-mobile" data-i18n="homeBtnShort">Home</span>
+            <span class="home-btn-label-desktop" data-i18n="homeBtnFull">Home page</span>
+            <span class="home-btn-arrow">↗</span>
+        </a>
+
+        <a href="pro.html" class="block">
+            <div class="p-4 border-t border-neutral-900 hidden md:block hover:bg-neutral-900/50 transition-colors cursor-pointer">
+                <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-4 text-center group">
+                    <div class="text-xs font-medium text-neutral-400 mb-2 group-hover:text-violet-400 transition-colors" data-i18n="upgradeTitle">Upgrade to Pro</div>
+                    <button class="w-full bg-neutral-100 hover:bg-white text-black text-xs font-medium py-1.5 rounded-md transition-colors">
+                        <span data-i18n="viewPlans">View Plans</span>
+                    </button>
+                </div>
+            </div>
+        </a>
+    </aside>
+    <!-- Main Content Layout -->
+    <main class="flex-1 flex flex-col min-w-0 bg-[#000000]">
+
+        <!-- Navbar -->
+        <header class="h-16 flex items-center justify-between px-6 border-b border-neutral-900 shrink-0 bg-[#0a0a0a]/80 backdrop-blur-md sticky top-0 z-10">
+            <div class="flex items-center bg-neutral-900/50 border border-neutral-800 rounded-full px-3 py-1.5 w-48 md:w-80 focus-within:border-neutral-700 focus-within:bg-neutral-900 transition-colors">
+                <iconify-icon icon="solar:magnifer-linear" stroke-width="1.5" class="text-neutral-500 text-lg mr-2"></iconify-icon>
+                <input type="text" placeholder="Search..." data-i18n-placeholder="searchPlaceholder" class="bg-transparent text-sm text-neutral-200 w-full outline-none placeholder:text-neutral-600">
+            </div>
+
+            <div class="flex items-center gap-2 border-l border-neutral-900 pl-4 ml-4">
+                <div class="hidden sm:flex items-center gap-2">
+                    <button class="lang-switch px-2 py-1 rounded-full text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors" data-lang="en">EN</button>
+                    <button class="lang-switch px-2 py-1 rounded-full text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors" data-lang="ru">RU</button>
+                    <button class="lang-switch px-2 py-1 rounded-full text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors" data-lang="uz">UZ</button>
+                </div>
+                <button class="text-neutral-500 hover:text-neutral-200 transition-colors relative">
+                    <iconify-icon icon="solar:bell-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                    <span
+                        class="absolute top-0 right-0 w-2 h-2 bg-blue-500 rounded-full border border-[#0a0a0a]"></span>
+                </button>
+                <button class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 overflow-hidden hover:opacity-80 transition-opacity">
+                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="Profile"
+                        class="w-full h-full object-cover">
+                </button>
+            </div>
+        </header>
+
+        <!-- Dynamic Sections -->
+        <div class="flex-1 overflow-y-auto p-4 md:p-8 relative">
+            <section id="sec-play" class="content-section fade-in max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start justify-center">
+                    
+                    <!-- Game Board Area -->
+                    <div class="lg:col-span-8 flex flex-col gap-4">
+                        <!-- Opponent Info -->
+                        <div class="flex items-center justify-between bg-neutral-900/40 backdrop-blur-md border border-neutral-800/50 p-3 rounded-xl">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-violet-500/20 flex items-center justify-center border border-violet-500/30">
+                                    <iconify-icon icon="solar:cpu-bold-duotone" class="text-2xl text-violet-400"></iconify-icon>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-neutral-200" data-i18n="playerComputer">Computer (Level 5)</h3>
+                                    <p class="text-[10px] text-neutral-500 flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                        Online
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="text-xl font-mono font-medium text-neutral-300 bg-neutral-800/50 px-3 py-1 rounded-md border border-neutral-700/50">
+                                10:00
+                            </div>
+                        </div>
+
+                        <!-- The Board -->
+                        <div class="bg-neutral-900 p-0 md:p-1 rounded-2xl border border-neutral-800 shadow-2xl relative overflow-hidden group max-w-[800px] mx-auto w-full">
+                            <!-- Atmosphere effect -->
+                            <div class="absolute -top-24 -right-24 w-48 h-48 bg-violet-500/10 blur-[100px] rounded-full"></div>
+                            <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-500/10 blur-[100px] rounded-full"></div>
+                            
+                            <div id="play-chessboard" class="grid grid-cols-8 aspect-square border border-neutral-800 rounded overflow-hidden shadow-inner w-full relative z-10">
+                                <!-- Board will be rendered here by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Player Info -->
+                        <div class="flex items-center justify-between bg-neutral-900/40 backdrop-blur-md border border-neutral-800/50 p-3 rounded-xl">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg overflow-hidden border border-neutral-800">
+                                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="You" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-neutral-200" data-i18n="playerYou">You</h3>
+                                    <p class="text-[10px] text-neutral-500">1523 Elo</p>
+                                </div>
+                            </div>
+                            <div class="text-xl font-mono font-medium text-neutral-300 bg-neutral-800/50 px-3 py-1 rounded-md border border-neutral-700/50">
+                                08:45
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Controls -->
+                    <div class="lg:col-span-4 space-y-6">
+                        <!-- Game Status & Controls -->
+                        <div class="bg-neutral-900/40 backdrop-blur-md border border-neutral-800/50 p-6 rounded-2xl space-y-6">
+                            <div class="space-y-2">
+                                <h2 class="text-xl font-semibold text-neutral-100" data-i18n="playTitle">Play with Computer</h2>
+                                <p class="text-xs text-neutral-500" data-i18n="playSubtitle">Challenge our advanced AI and improve your skills.</p>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <button class="w-full bg-neutral-100 hover:bg-white text-black py-3 rounded-xl text-sm font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-white/5">
+                                    <iconify-icon icon="solar:play-bold" class="text-lg"></iconify-icon>
+                                    <span data-i18n="newGame">New Game</span>
+                                </button>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <button class="bg-neutral-800/50 hover:bg-neutral-800 border border-neutral-700/50 text-neutral-300 py-2.5 rounded-xl text-xs font-medium transition-all flex items-center justify-center gap-2">
+                                        <iconify-icon icon="solar:flag-bold" class="text-neutral-500"></iconify-icon>
+                                        <span data-i18n="resign">Resign</span>
+                                    </button>
+                                    <button class="bg-neutral-800/50 hover:bg-neutral-800 border border-neutral-700/50 text-neutral-300 py-2.5 rounded-xl text-xs font-medium transition-all flex items-center justify-center gap-2">
+                                        <iconify-icon icon="solar:hand-shake-bold" class="text-neutral-500"></iconify-icon>
+                                        <span data-i18n="draw">Draw</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Thinking Indicator -->
+                            <div class="pt-4 border-t border-neutral-800/50">
+                                <div class="flex items-center gap-3 text-violet-400">
+                                    <div class="flex gap-1">
+                                        <span class="w-1.5 h-1.5 bg-violet-500 rounded-full animate-bounce"></span>
+                                        <span class="w-1.5 h-1.5 bg-violet-500 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                                        <span class="w-1.5 h-1.5 bg-violet-500 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                                    </div>
+                                    <span class="text-xs font-medium" data-i18n="computerThinking">Computer is thinking...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Move List (Placeholder) -->
+                        <div class="bg-neutral-900/40 backdrop-blur-md border border-neutral-800/50 p-6 rounded-2xl">
+                            <h3 class="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-4">Move History</h3>
+                            <div class="space-y-1 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
+                                <div class="grid grid-cols-12 text-xs py-1.5 border-b border-neutral-800/30">
+                                    <span class="col-span-2 text-neutral-600">1.</span>
+                                    <span class="col-span-5 text-neutral-300 font-medium">e4</span>
+                                    <span class="col-span-5 text-neutral-300 font-medium">e5</span>
+                                </div>
+                                <div class="grid grid-cols-12 text-xs py-1.5 border-b border-neutral-800/30">
+                                    <span class="col-span-2 text-neutral-600">2.</span>
+                                    <span class="col-span-5 text-neutral-300 font-medium">Nf3</span>
+                                    <span class="col-span-5 text-neutral-300 font-medium">Nc6</span>
+                                </div>
+                                <div class="grid grid-cols-12 text-xs py-1.5 border-b border-neutral-800/30">
+                                    <span class="col-span-2 text-neutral-600">3.</span>
+                                    <span class="col-span-5 text-neutral-300 font-medium">Bb5</span>
+                                    <span class="col-span-5 text-neutral-300 font-medium">a6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
