@@ -108,12 +108,52 @@
                     <div class="px-6 pb-6 relative">
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end -mt-10 mb-6 gap-4">
                             <div class="flex items-end gap-4">
-                                <div class="w-24 h-24 rounded-xl bg-neutral-800 border-4 border-[#0a0a0a] overflow-hidden shrink-0 shadow-lg">
-                                    <img src="" alt="Profile" class="w-full h-full object-cover">
+                                <div class="relative group">
+                                    <div class="w-24 h-24 rounded-xl bg-neutral-800 border-4 border-[#0a0a0a] overflow-hidden shrink-0 shadow-lg relative z-0">
+                                        <img src="./photo_2024-06-20_11-36-55.jpg" alt="Profile" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-emerald-500 border-4 border-[#0a0a0a] rounded-full z-10 animate-pulse" title="Online"></div>
                                 </div>
                                 <div class="pb-1">
-                                    <h2 class="text-2xl font-bold tracking-tight text-neutral-100">Alfaniko</h2>
-                                    <p class="text-sm text-neutral-500" data-i18n="joinedDate">Joined March 2023</p>
+                                    <div class="flex items-center gap-2 mb-0.5">
+                                        <h2 class="text-2xl font-bold tracking-tight text-neutral-100">Alfaniko</h2>
+                                        <span class="bg-gradient-to-r from-violet-600 to-indigo-600 text-[10px] font-bold px-2 py-0.5 rounded text-white tracking-wider" data-i18n="proBadge">PRO MEMBER</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-sm text-neutral-500">
+                                        <span class="flex items-center gap-1">
+                                            <iconify-icon icon="twemoji:flag-uzbekistan" class="text-base"></iconify-icon>
+                                            <span data-i18n="location">Uzbekistan</span>
+                                        </span>
+                                        <span class="w-1 h-1 bg-neutral-700 rounded-full"></span>
+                                        <span data-i18n="joinedDate">Joined March 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-2 w-full sm:w-auto">
+                                <button class="flex-1 sm:flex-none px-4 py-2 bg-neutral-100 hover:bg-white text-black text-sm font-semibold rounded-lg transition-all duration-200" data-i18n="editProfile">
+                                    Edit Profile
+                                </button>
+                                <button class="p-2 bg-neutral-800 border border-neutral-700 hover:bg-neutral-700 text-neutral-300 rounded-lg transition-all duration-200" data-i18n-title="shareProfile">
+                                    <iconify-icon icon="solar:share-linear" class="text-xl"></iconify-icon>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Bio & Social Stats -->
+                        <div class="mb-8 space-y-4">
+                            <p class="text-neutral-400 text-sm leading-relaxed max-w-2xl" data-i18n="userBio">
+                                Chess enthusiast | Strategy lover | Road to Grandmaster ♟️
+                            </p>
+                            
+                            <div class="flex items-center gap-6">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-neutral-100 font-semibold">1,240</span>
+                                    <span class="text-neutral-500 text-sm" data-i18n="followersCount">Followers</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-neutral-100 font-semibold">84</span>
+                                    <span class="text-neutral-500 text-sm" data-i18n="followingCount">Following</span>
                                 </div>
                             </div>
                         </div>

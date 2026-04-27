@@ -37,6 +37,13 @@ const translations = {
         cardTopic3: 'Community',
         cardTitle3: 'Grandmaster Speedrun Challenge Concludes',
         cardText3: 'Watch highlights from the recent 24-hour stream where community members tested their skills against a GM.',
+        location: 'Uzbekistan',
+        followersCount: 'Followers',
+        followingCount: 'Following',
+        shareProfile: 'Share',
+        userBio: 'Chess enthusiast | Strategy lover | Road to Grandmaster ♟️',
+        proBadge: 'PRO MEMBER',
+        onlineStatus: 'Online',
         gameModeBlitz: 'Blitz',
         gameModeRapid: 'Rapid',
         gameModeClassical: 'Classical',
@@ -108,6 +115,13 @@ const translations = {
         cardTopic3: 'Сообщество',
         cardTitle3: 'Завершен марафон гроссмейстеров',
         cardText3: 'Смотрите лучшие моменты 24-часового стрима, где участники проверяли свои навыки против гроссмейстера.',
+        location: 'Узбекистан',
+        followersCount: 'Подписчики',
+        followingCount: 'Подписки',
+        shareProfile: 'Поделиться',
+        userBio: 'Любитель шахмат | Фанат стратегий | Путь к гроссмейстеру ♟️',
+        proBadge: 'PRO УЧАСТНИК',
+        onlineStatus: 'В сети',
         gameModeBlitz: 'Блиц',
         gameModeRapid: 'Рапид',
         gameModeClassical: 'Классика',
@@ -179,6 +193,13 @@ const translations = {
         cardTopic3: 'Hamjamiyat',
         cardTitle3: 'Grandmaster Speedrun tanlovi yakunlandi',
         cardText3: 'GM ga qarshi o‘z mahoratlarini sinab ko‘rgan jamoa a’zolari 24 soatlik efirning eng yaxshi lahzalarini tomosha qiling.',
+        location: 'O‘zbekiston',
+        followersCount: 'Obunachilar',
+        followingCount: 'Kuzatuvlar',
+        shareProfile: 'Ulashish',
+        userBio: 'Shaxmat ishqibozi | Strategiya ustasi | Grossmeysterlik sari ♟️',
+        proBadge: 'PRO A\'ZO',
+        onlineStatus: 'Onlayn',
         gameModeBlitz: 'Blitz',
         gameModeRapid: 'Rapid',
         gameModeClassical: 'Classical',
@@ -219,6 +240,7 @@ const sections = document.querySelectorAll('.content-section');
 const languageButtons = document.querySelectorAll('[data-lang]');
 const i18nElements = document.querySelectorAll('[data-i18n]');
 const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+const titleElements = document.querySelectorAll('[data-i18n-title]');
 
 function setLanguage(lang) {
     if (!translations[lang]) {
@@ -237,6 +259,13 @@ function setLanguage(lang) {
         const key = el.dataset.i18nPlaceholder;
         if (key && translations[lang][key]) {
             el.placeholder = translations[lang][key];
+        }
+    });
+
+    titleElements.forEach(el => {
+        const key = el.dataset.i18nTitle;
+        if (key && translations[lang][key]) {
+            el.title = translations[lang][key];
         }
     });
 
