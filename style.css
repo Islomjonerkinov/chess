@@ -365,3 +365,7 @@ body {
     background: url(./wooden-chess-board-with-white-and-green-squares-with-the-white-and-black-pieces-arranged-at-the-beginning-of-the-game-vector.jpg) no-repeat center center / 100% 100%;
     border-radius: 8px;
 }
+#icon i{
+    width: 20px;
+    height: 20px;
+}

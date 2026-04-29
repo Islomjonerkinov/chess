@@ -41,7 +41,7 @@ const translations = {
         followersCount: 'Followers',
         followingCount: 'Following',
         shareProfile: 'Share',
-        userBio: 'Chess enthusiast | Strategy lover | Road to Grandmaster ♟️',
+        userBio: 'Chess enthusiast | Strategy lover | Road to Grandmaster <iconify-icon icon="fa-solid:chess-king" style="color:#fff;font-size:16px;vertical-align:middle;"></iconify-icon>',
         proBadge: 'PRO MEMBER',
         onlineStatus: 'Online',
         gameModeBlitz: 'Blitz',
@@ -119,7 +119,7 @@ const translations = {
         followersCount: 'Подписчики',
         followingCount: 'Подписки',
         shareProfile: 'Поделиться',
-        userBio: 'Любитель шахмат | Фанат стратегий | Путь к гроссмейстеру ♟️',
+        userBio: 'Любитель шахмат | Фанат стратегий | Путь к гроссмейстеру <iconify-icon icon="fa-solid:chess-king" style="color:#fff;font-size:16px;vertical-align:middle;"></iconify-icon>',
         proBadge: 'PRO УЧАСТНИК',
         onlineStatus: 'В сети',
         gameModeBlitz: 'Блиц',
@@ -197,7 +197,7 @@ const translations = {
         followersCount: 'Obunachilar',
         followingCount: 'Kuzatuvlar',
         shareProfile: 'Ulashish',
-        userBio: 'Shaxmat ishqibozi | Strategiya ustasi | Grossmeysterlik sari ♟️',
+        userBio: 'Shaxmat ishqibozi | Strategiya ustasi | Grossmeysterlik sari <iconify-icon icon="fa-solid:chess-king" style="color:#fff;font-size:16px;vertical-align:middle;"></iconify-icon>',
         proBadge: 'PRO A\'ZO',
         onlineStatus: 'Onlayn',
         gameModeBlitz: 'Blitz',
@@ -251,7 +251,7 @@ function setLanguage(lang) {
     i18nElements.forEach(el => {
         const key = el.dataset.i18n;
         if (key && translations[lang][key]) {
-            el.textContent = translations[lang][key];
+            el.innerHTML = translations[lang][key];
         }
     });
 
