@@ -14,8 +14,10 @@
 
 <body class="h-screen overflow-hidden flex antialiased selection:bg-neutral-800">
     <!-- Sidebar -->
-    <aside class="w-16 md:w-64 bg-[#0a0a0a] border-r border-neutral-900 flex flex-col shrink-0 transition-all duration-300 z-20 relative">
-        <div class="h-16 flex items-center justify-center md:justify-start md:px-6 border-b border-neutral-900 shrink-0">
+    <aside
+        class="w-16 md:w-64 bg-[#0a0a0a] border-r border-neutral-900 flex flex-col shrink-0 transition-all duration-300 z-20 relative">
+        <div
+            class="h-16 flex items-center justify-center md:justify-start md:px-6 border-b border-neutral-900 shrink-0">
             <div class="font-semibold tracking-tighter text-xl text-neutral-100 flex items-center gap-2">
                 <iconify-icon icon="solar:crown-minimalistic-linear" class="text-2xl md:hidden"></iconify-icon>
                 <span class="hidden md:block">CHESS</span>
@@ -24,49 +26,58 @@
 
 
         <nav class="flex-1 p-3 space-y-1 overflow-y-auto">
-            <a href="home.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+            <a href="home.html"
+                class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
                 <iconify-icon icon="solar:home-2-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
                 <span class="hidden md:block" data-i18n="navHome">Home</span>
             </a>
-            <a href="news.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+            <a href="news.html"
+                class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
                 <iconify-icon icon="solar:document-text-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
                 <span class="hidden md:block" data-i18n="navNews">News</span>
             </a>
-            <a href="players.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+            <a href="players.html"
+                class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
                 <iconify-icon icon="solar:users-group-rounded-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
                 <span class="hidden md:block" data-i18n="navPlayers">Players</span>
             </a>
-            <a href="leaderboard.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 bg-neutral-900 border border-neutral-800 text-neutral-100 shadow-sm">
+            <a href="leaderboard.html"
+                class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 bg-neutral-900 border border-neutral-800 text-neutral-100 shadow-sm">
                 <iconify-icon icon="solar:cup-star-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
                 <span class="hidden md:block" data-i18n="navLeaderboard">Leaderboard</span>
             </a>
-            <a href="profile.html" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
+            <a href="profile.html"
+                class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-500 hover:text-neutral-200 hover:bg-neutral-900/50 transition-all duration-200 border border-transparent">
                 <iconify-icon icon="solar:user-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
                 <span class="hidden md:block" data-i18n="navProfile">Profile</span>
             </a>
         </nav>
         <a href="https://home-page-pied-nine.vercel.app/" class="home-btn" aria-label="Go to home page">
             <span class="home-btn-icon">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-      <polyline points="9 22 9 12 15 12 15 22"/>
-    </svg>
-  </span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+            </span>
             <span class="home-btn-label-mobile" data-i18n="homeBtnShort">Home</span>
             <span class="home-btn-label-desktop" data-i18n="homeBtnFull">Home page</span>
             <span class="home-btn-arrow">↗</span>
         </a>
 
         <a href="pro.html" class="block mt-auto">
-            <div class="p-3 md:p-4 border-t border-neutral-900 hover:bg-neutral-900/50 transition-colors cursor-pointer">
+            <div
+                class="p-3 md:p-4 border-t border-neutral-900 hover:bg-neutral-900/50 transition-colors cursor-pointer">
                 <!-- Mobile Icon -->
                 <div class="md:hidden flex justify-center items-center py-1">
                     <iconify-icon icon="solar:star-fall-bold-duotone" class="text-2xl text-violet-500"></iconify-icon>
                 </div>
                 <!-- Desktop Banner -->
                 <div class="hidden md:block bg-neutral-900 border border-neutral-800 rounded-xl p-4 text-center group">
-                    <div class="text-xs font-medium text-neutral-400 mb-2 group-hover:text-violet-400 transition-colors" data-i18n="upgradeTitle">Upgrade to Pro</div>
-                    <button class="w-full bg-neutral-100 hover:bg-white text-black text-xs font-medium py-1.5 rounded-md transition-colors">
+                    <div class="text-xs font-medium text-neutral-400 mb-2 group-hover:text-violet-400 transition-colors"
+                        data-i18n="upgradeTitle">Upgrade to Pro</div>
+                    <button
+                        class="w-full bg-neutral-100 hover:bg-white text-black text-xs font-medium py-1.5 rounded-md transition-colors">
                         <span data-i18n="viewPlans">View Plans</span>
                     </button>
                 </div>
@@ -78,22 +89,34 @@
     <main class="flex-1 flex flex-col min-w-0 bg-[#000000]">
 
         <!-- Navbar -->
-        <header class="h-14 md:h-16 flex items-center justify-between px-3 md:px-6 border-b border-neutral-900 shrink-0 bg-[#0a0a0a]/80 backdrop-blur-md sticky top-0 z-10">
-            <div class="flex items-center bg-neutral-900/50 border border-neutral-800 rounded-full px-2 md:px-3 py-1.5 w-28 md:w-80 focus-within:border-neutral-700 focus-within:bg-neutral-900 transition-colors">
-                <iconify-icon icon="solar:magnifer-linear" stroke-width="1.5" class="text-neutral-500 text-lg mr-1 md:mr-2"></iconify-icon>
-                <input type="text" placeholder="Search..." data-i18n-placeholder="searchPlaceholder" class="bg-transparent text-sm text-neutral-200 w-full outline-none placeholder:text-neutral-600">
+        <header
+            class="h-14 md:h-16 flex items-center justify-between px-3 md:px-6 border-b border-neutral-900 shrink-0 bg-[#0a0a0a]/80 backdrop-blur-md sticky top-0 z-10">
+            <div
+                class="flex items-center bg-neutral-900/50 border border-neutral-800 rounded-full px-2 md:px-3 py-1.5 w-28 md:w-80 focus-within:border-neutral-700 focus-within:bg-neutral-900 transition-colors">
+                <iconify-icon icon="solar:magnifer-linear" stroke-width="1.5"
+                    class="text-neutral-500 text-lg mr-1 md:mr-2"></iconify-icon>
+                <input type="text" placeholder="Search..." data-i18n-placeholder="searchPlaceholder"
+                    class="bg-transparent text-sm text-neutral-200 w-full outline-none placeholder:text-neutral-600">
             </div>
             <div class="flex items-center gap-1.5 md:gap-2 border-l border-neutral-900 pl-2 md:pl-4 ml-2 md:ml-4">
                 <div class="flex items-center gap-1 md:gap-2">
-                    <button class="lang-switch px-1.5 md:px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors" data-lang="en">EN</button>
-                    <button class="lang-switch px-1.5 md:px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors" data-lang="ru">RU</button>
-                    <button class="lang-switch px-1.5 md:px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors" data-lang="uz">UZ</button>
+                    <button
+                        class="lang-switch px-1.5 md:px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors"
+                        data-lang="en">EN</button>
+                    <button
+                        class="lang-switch px-1.5 md:px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors"
+                        data-lang="ru">RU</button>
+                    <button
+                        class="lang-switch px-1.5 md:px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs font-semibold tracking-wide border border-neutral-700 text-neutral-300 hover:bg-neutral-800 transition-colors"
+                        data-lang="uz">UZ</button>
                 </div>
                 <button class="text-neutral-500 hover:text-neutral-200 transition-colors relative">
                     <iconify-icon icon="solar:bell-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
-                    <span class="absolute top-0 right-0 w-2 h-2 bg-blue-500 rounded-full border border-[#0a0a0a]"></span>
+                    <span
+                        class="absolute top-0 right-0 w-2 h-2 bg-blue-500 rounded-full border border-[#0a0a0a]"></span>
                 </button>
-                <button class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-neutral-800 border border-neutral-700 overflow-hidden hover:opacity-80 transition-opacity">
+                <button
+                    class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-neutral-800 border border-neutral-700 overflow-hidden hover:opacity-80 transition-opacity">
                     <img src="./photo_2024-06-20_11-36-55.jpg" alt="Profile" class="w-full h-full object-cover">
                 </button>
             </div>
@@ -103,8 +126,10 @@
         <div class="flex-1 overflow-y-auto p-4 md:p-8 relative">
             <section id="sec-leaderboard" class="content-section  fade-in max-w-4xl mx-auto">
                 <div class="mb-8">
-                    <h2 class="text-2xl font-semibold tracking-tight text-neutral-100 mb-2" data-i18n="globalLeaderboardTitle">Global Leaderboard</h2>
-                    <p class="text-sm text-neutral-500" data-i18n="globalLeaderboardSubtitle">The highest rated active players this season.</p>
+                    <h2 class="text-2xl font-semibold tracking-tight text-neutral-100 mb-2"
+                        data-i18n="globalLeaderboardTitle">Global Leaderboard</h2>
+                    <p class="text-sm text-neutral-500" data-i18n="globalLeaderboardSubtitle">The highest rated active
+                        players this season.</p>
                 </div>
 
                 <div class="bg-[#0a0a0a] border border-neutral-800 rounded-xl overflow-hidden shadow-sm">
@@ -112,24 +137,30 @@
                         <table class="w-full text-left text-sm whitespace-nowrap">
                             <thead class="bg-neutral-900/50 border-b border-neutral-800">
                                 <tr>
-                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider w-16 text-center" data-i18n="leaderboardRank">
+                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider w-16 text-center"
+                                        data-i18n="leaderboardRank">
                                         Rank</th>
-                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider" data-i18n="leaderboardPlayer">
+                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider"
+                                        data-i18n="leaderboardPlayer">
                                         Player</th>
-                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider text-right" data-i18n="leaderboardRating">
+                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider text-right"
+                                        data-i18n="leaderboardRating">
                                         Rating</th>
-                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider text-right" data-i18n="leaderboardWinRate">
+                                    <th class="px-6 py-4 text-xs font-medium text-neutral-500 uppercase tracking-wider text-right"
+                                        data-i18n="leaderboardWinRate">
                                         Win Rate</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-neutral-800/50">
                                 <tr class="hover:bg-neutral-900/30 transition-colors">
                                     <td class="px-6 py-4 text-center">
-                                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-500/10 text-amber-500 font-semibold text-xs border border-amber-500/20">1</span>
+                                        <span
+                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-500/10 text-amber-500 font-semibold text-xs border border-amber-500/20">1</span>
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="flex items-center gap-3">
-                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR17FDX4TBPjw_LHC4CooAJzou1oMroACQ7Bw&s" class="w-8 h-8 rounded-full bg-neutral-800">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR17FDX4TBPjw_LHC4CooAJzou1oMroACQ7Bw&s"
+                                                class="w-8 h-8 rounded-full bg-neutral-800">
                                             <span class="font-medium text-neutral-200">MagnusCarlsen</span>
                                         </div>
                                     </td>
@@ -138,11 +169,13 @@
                                 </tr>
                                 <tr class="hover:bg-neutral-900/30 transition-colors">
                                     <td class="px-6 py-4 text-center">
-                                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-neutral-400/10 text-neutral-300 font-semibold text-xs border border-neutral-400/20">2</span>
+                                        <span
+                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-neutral-400/10 text-neutral-300 font-semibold text-xs border border-neutral-400/20">2</span>
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="flex items-center gap-3">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Hikaru_Nakamura_%282016%29_crop.jpg/960px-Hikaru_Nakamura_%282016%29_crop.jpg" class="w-8 h-8 rounded-full bg-neutral-800">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Hikaru_Nakamura_%282016%29_crop.jpg/960px-Hikaru_Nakamura_%282016%29_crop.jpg"
+                                                class="w-8 h-8 rounded-full bg-neutral-800">
                                             <span class="font-medium text-neutral-200">Hikaru</span>
                                         </div>
                                     </td>
@@ -151,11 +184,13 @@
                                 </tr>
                                 <tr class="hover:bg-neutral-900/30 transition-colors">
                                     <td class="px-6 py-4 text-center">
-                                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange-600/10 text-orange-500 font-semibold text-xs border border-orange-600/20">3</span>
+                                        <span
+                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange-600/10 text-orange-500 font-semibold text-xs border border-orange-600/20">3</span>
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="flex items-center gap-3">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/World_Chess_Championship_2023%2C_game_12%2C_Ding_Liren.jpg" class="w-8 h-8 rounded-full bg-neutral-800">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/World_Chess_Championship_2023%2C_game_12%2C_Ding_Liren.jpg"
+                                                class="w-8 h-8 rounded-full bg-neutral-800">
                                             <span class="font-medium text-neutral-200">DingLiren</span>
                                         </div>
                                     </td>
@@ -166,7 +201,8 @@
                                     <td class="px-6 py-4 text-center text-neutral-600 text-xs font-medium">4</td>
                                     <td class="px-6 py-4">
                                         <div class="flex items-center gap-3">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Fabiano_Caruana_in_2025.jpg/960px-Fabiano_Caruana_in_2025.jpg  " class="w-8 h-8 rounded-full bg-neutral-800 opacity-80">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Fabiano_Caruana_in_2025.jpg/960px-Fabiano_Caruana_in_2025.jpg  "
+                                                class="w-8 h-8 rounded-full bg-neutral-800 opacity-80">
                                             <span class="font-medium text-neutral-400">FabianoCaruana</span>
                                         </div>
                                     </td>
@@ -177,11 +213,23 @@
                                     <td class="px-6 py-4 text-center text-neutral-600 text-xs font-medium">5</td>
                                     <td class="px-6 py-4">
                                         <div class="flex items-center gap-3">
-                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwmAPo-cL_jUm5u28MW1GOds6_iCm49iSg0dNMqLH-psT8afxvLimqnYDKw7h3cyN77PNUsEEmo83b3ARPoaNl2t0_Va0l371xsUfajC1rfQ&s=10" class="w-8 h-8 rounded-full bg-neutral-800 opacity-80">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwmAPo-cL_jUm5u28MW1GOds6_iCm49iSg0dNMqLH-psT8afxvLimqnYDKw7h3cyN77PNUsEEmo83b3ARPoaNl2t0_Va0l371xsUfajC1rfQ&s=10"
+                                                class="w-8 h-8 rounded-full bg-neutral-800 opacity-80">
                                             <span class="font-medium text-neutral-400">Nepo</span>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 text-right font-medium text-neutral-400">2795</td>
+                                    <td class="px-6 py-4 text-right text-neutral-600">59.3%</td>
+                                </tr>
+                                <tr class="hover:bg-neutral-900/30 transition-colors">
+                                    <td class="px-6 py-4 text-center text-neutral-600 text-xs font-medium">5</td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <img src="https://daryo.uz/image/960x540?url=https%3A%2F%2Fdata.daryo.uz%2Fmedia%2F2026%2F04%2F02%2F1775102303123254162_Candidates2026.jpg" class="w-8 h-8 rounded-full bg-neutral-800 opacity-80">
+                                            <span class="font-medium text-neutral-400">Javohir Sindarov</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-right font-medium text-neutral-400">2759.1</td>
                                     <td class="px-6 py-4 text-right text-neutral-600">59.3%</td>
                                 </tr>
                             </tbody>

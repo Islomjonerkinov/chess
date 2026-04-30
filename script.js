@@ -295,3 +295,29 @@ const freeTrialBtns = document.querySelectorAll('.free-trial-btn');
 const successModal = document.getElementById('success-modal');
 const closeModalBtn = document.getElementById('close-modal-btn');
 
+// Modal Logic for Pro Page
+if (freeTrialBtns.length > 0 && successModal) {
+    freeTrialBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+        });
+    });
+}
+
+if (closeModalBtn && successModal) {
+    closeModalBtn.addEventListener('click', () => {
+        successModal.classList.add('hidden');
+        successModal.classList.remove('flex');
+    });
+
+    // Close modal when clicking outside the content (on the backdrop)
+    successModal.addEventListener('click', (e) => {
+        if (e.target === successModal) {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+        }
+    });
+}
+
+
