@@ -24,12 +24,38 @@
             
             <div class="input-group">
                 <iconify-icon icon="solar:user-linear" class="input-icon"></iconify-icon>
-                <input type="text" placeholder="Ismingizni kiriting" name="firstname">
+                <input type="text" placeholder="Ismingizni kiriting" name="firstname" required>
             </div>
             
             <div class="input-group">
                 <iconify-icon icon="solar:user-id-linear" class="input-icon"></iconify-icon>
-                <input type="text" placeholder="Familiyangizni kiriting" name="lastname">
+                <input type="text" placeholder="Familiyangizni kiriting" name="lastname" required>
+            </div>
+
+            <div class="input-group">
+                <iconify-icon icon="solar:letter-linear" class="input-icon"></iconify-icon>
+                <input type="email" placeholder="Email manzilingizni kiriting" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <iconify-icon icon="solar:lock-password-linear" class="input-icon"></iconify-icon>
+                <input type="password" id="password" placeholder="Parol yarating" name="password" required>
+                <iconify-icon icon="solar:eye-linear" id="togglePassword" class="eye-icon"></iconify-icon>
+            </div>
+
+            <div class="input-group">
+                <iconify-icon icon="solar:ranking-linear" class="input-icon"></iconify-icon>
+                <select name="level" class="custom-select">
+                    <option value="" disabled selected>Shaxmat darajangizni tanlang</option>
+                    <option value="beginner">Boshlang'ich (Beginner)</option>
+                    <option value="intermediate">O'rtacha (Intermediate)</option>
+                    <option value="advanced">Professional (Advanced)</option>
+                </select>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Foydalanish shartlariga roziman</label>
             </div>
             
             <a href="home.html">
@@ -37,8 +63,30 @@
                     Boshlash <iconify-icon icon="solar:arrow-right-linear" style="font-size: 20px;"></iconify-icon>
                 </button>
             </a>
+
+            <div class="divider">
+                <span>yoki</span>
+            </div>
+
+            <button class="btn-social">
+                <iconify-icon icon="logos:google-icon"></iconify-icon>
+                Google orqali kirish
+            </button>
         </div>
     </section>
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye icon
+            this.setAttribute('icon', type === 'password' ? 'solar:eye-linear' : 'solar:eye-closed-linear');
+        });
+    </script>
 </body>
 
 </html>
